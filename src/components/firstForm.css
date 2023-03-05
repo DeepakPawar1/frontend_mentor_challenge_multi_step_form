@@ -1,0 +1,52 @@
+.form-content{
+    margin-top:1.8rem;
+}
+
+.form-content  p, .form-content h5{
+    color: black;
+}
+
+#header{
+font-size: 1.5rem;
+color: #03295a;
+}
+#headerinfo {
+    margin-top: 1rem;
+    color: #a6a7ae;
+}
+
+.form{
+    display: block;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+.form div{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.form input {
+    margin-top: 5px;
+    border: .01rem solid #a4a4ac;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width:75%;
+}
+.form label{
+    color: #03295a ;
+}
+#submit{
+    text-align: center;
+    width:6rem;
+    margin-left: 60%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;;
+    border-radius: 10px;
+    color: white;
+    background: #03295a ;
+}
+

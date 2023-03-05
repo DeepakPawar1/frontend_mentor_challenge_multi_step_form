@@ -1,0 +1,40 @@
+.content , .items ,.index , .data , p , h5{
+    background: unset;
+    color:white;
+    text-align: left;
+ }
+ .left .content .items .index .data  p{
+    font-size: 10px;
+}
+
+.content{
+    margin-top: 1rem;
+}
+
+
+.items{
+    display: flex;
+    gap: 2rem;
+    /* background-color:rgba(255,255,255,0.5); */
+    opacity: 1;
+}
+
+
+.index{
+    height:35px;
+    width:35px;
+    font-size: 12px;
+    font-weight: bolder;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .7rem;
+}
+
+.active{
+    background: lightcyan;
+    color: black;
+}
+
+.data p{
+    font-size: 12px;
+}
