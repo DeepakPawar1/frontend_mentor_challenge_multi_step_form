@@ -5,7 +5,7 @@ function Sidepanel ({data,activeIndex}){
     const [active, setActive] = useState(false);
     useEffect(()=>{
         setActive(activeIndex);
-    },[active])
+    },[active,activeIndex])
     // setActive(activeIndex);    
     const renderData= data.map((item , index)=>{
             return (

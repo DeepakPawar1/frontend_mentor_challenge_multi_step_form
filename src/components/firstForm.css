@@ -1,5 +1,10 @@
 .form-content{
-    margin-top:1.8rem;
+    height: 70vh;
+    width:75%;
+    padding-bottom: 1.8rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .form-content  p, .form-content h5{
@@ -32,8 +37,8 @@ color: #03295a;
     margin-top: 5px;
     border: .01rem solid #a4a4ac;
     border-radius: 5px;
-    padding: 0.5rem;
-    width:75%;
+    padding: 0.4rem;
+    /* width:75%; */
 }
 .form label{
     color: #03295a ;
@@ -41,12 +46,18 @@ color: #03295a;
 #submit{
     text-align: center;
     width:6rem;
-    margin-left: 60%;
+    /* margin-left: 60%; */
     height: 2.5rem;
     padding-left: 1rem;
     padding-right: 1rem;;
     border-radius: 10px;
     color: white;
     background: #03295a ;
+    cursor: pointer;
+}
+.footer-buttons{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: end;
 }
 

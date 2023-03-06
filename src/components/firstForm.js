@@ -1,5 +1,12 @@
 import './firstForm.css';
-function Firstform(){
+
+function Firstform({setActive}){
+
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        setActive(1);
+    }
+
     return (
         <div className="form-content">
             <div className="form-header">
@@ -20,8 +27,8 @@ function Firstform(){
                     <label>Phone Number</label> 
                     <input type="tel"/>
                     </div>
-                    <div>
-                        <button id="submit">Next Step</button>
+                    <div className="footer-buttons">
+                        <button id="submit" onClick={handleSubmit}>Next Step</button>
                     </div>
                 </form>
             </div>

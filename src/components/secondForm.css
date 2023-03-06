@@ -1,0 +1,64 @@
+.cards{
+    /* margin-top: 2rem; */
+    display:flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    /* margin-top: 1rem; */
+    display: flex;
+    justify-content: center;
+    /* margin-left:25% */
+    
+}
+
+.buttons h5{
+    color: gray ;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.footer-buttons{
+    display: flex;
+    justify-content:space-between;
+    /* margin-top: 20%; */
+    /* justify-content: space-between; */
+    /* margin-right: 30%; */
+}
+button:last-child{
+    text-align: center;
+    width:6rem;
+    /* margin-left: 60%; */
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;;
+    border-radius: 10px;
+    color: white;
+    background: #03295a ;
+    cursor: pointer;
+}
+button:first-child{
+    text-align: center;
+    width:6rem;
+    /* margin-left: 60%; */
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    color: gray;
+    background: #white ;
+    cursor: pointer;
+}
+.secondform-content{
+    height: 70vh;
+    width:75%;
+padding-bottom: 1.8rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.buttons .activeplan {
+    color:  #03295a;
+}
