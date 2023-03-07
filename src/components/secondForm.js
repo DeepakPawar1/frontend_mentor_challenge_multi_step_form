@@ -100,7 +100,7 @@ function SecondForm({setActive}){
             </div>
             <div className="footer-buttons">
                 <button id="secondFromback" onClick={()=>setActive(-1)}>Go Back</button>
-                <button>Next Step</button>
+                <button onClick={()=>setActive(1)}> Next Step </button>
             </div>
             
         </div>

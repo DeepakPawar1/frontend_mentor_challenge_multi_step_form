@@ -3,6 +3,8 @@ import Sidepanel from './sidepanel';
 import background from '../assets/images/bg-sidebar-desktop.svg';
 import Firstform from './firstForm.js';
 import SecondForm from './secondForm.js';
+import ThirdForm from './thirdForm';
+import FourthForm from './fourthForm.js'
 import { useState } from 'react';
 function Mainbody(){
 
@@ -33,6 +35,10 @@ function Mainbody(){
                             return <Firstform setActive={handlesetActive}></Firstform>;
                         case 1:
                             return <SecondForm setActive={handlesetActive}></SecondForm>
+                        case 2:
+                            return <ThirdForm setActive={handlesetActive}></ThirdForm>
+                        case 3:
+                            return <FourthForm setActive={handlesetActive}></FourthForm>
                         default:
                             console.log("in case default ",active)
                             return "";
