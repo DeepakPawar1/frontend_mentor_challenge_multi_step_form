@@ -38,3 +38,11 @@
 .data p{
     font-size: 12px;
 }
+
+@media screen and (max-width: 720px){
+    .data{
+        display:none;
+    }
+
+    
+}

@@ -5,17 +5,24 @@ import Image2 from '../assets/images/icon-advanced.svg';
 import Image3 from '../assets/images/icon-pro.svg';
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
-import {useState} from 'react';
+import {useState,useContext} from 'react';
+import dataContext from '../context/data';
 function SecondForm({setActive}){
-    const[toggle,setToggle] = useState(false);
-
-
+    
+    const {cdata,add_data} = useContext(dataContext);
+    const[toggle,setToggle] = useState(cdata.plan.type);
     const handleToggle=()=>{
-        console.log("*********")
         setToggle((current)=>{
-            console.log(current,"mmmmmm")
             return !current;
         })
+    }
+    const [selection,setSelection]=useState(cdata.plan);
+    const handleSubmit=()=>{
+        console.log("selection object value",selection)
+        add_data(selection);
+        console.log(cdata,"$$$$$$");
+        setActive(1)
+        
     }
     const AntSwitch = styled(Switch)(({ theme }) => ({
         width: 28,
@@ -59,23 +66,26 @@ function SecondForm({setActive}){
         },
       }));
 
-
+    
     const cardData=[{
         img: Image1,
         title: "Arcade",
-        amount: "$9/mo",
+        amount: 9,
+        amount_yearly: 90, 
         yearly: "2 months free"
     },
     {
         img: Image2,
         title: "Advanced",
-        amount: "$12/mo",
+        amount:12,
+        amount_yearly: 120, 
         yearly: "2 months free"
     },
     {
         img: Image3,
         title: "Pro",
-        amount: "$15/mo",
+        amount: 15,
+        amount_yearly: 150, 
         yearly: "2 months free"
     }
 ]
@@ -86,7 +96,7 @@ function SecondForm({setActive}){
                 <p id="headerinfo">You have the option of monthly or yearly billing.</p>
             </div>
             <div className="cards">
-                <Cards cardData={cardData} isMonthly={toggle}/>
+                <Cards cardData={cardData} isYearly={toggle} setSelection={setSelection}/>
             </div>
             <div className="buttons">
                 <h5 className={toggle ? '' : 'activeplan'}>Monthly</h5>
@@ -100,7 +110,7 @@ function SecondForm({setActive}){
             </div>
             <div className="footer-buttons">
                 <button id="secondFromback" onClick={()=>setActive(-1)}>Go Back</button>
-                <button onClick={()=>setActive(1)}> Next Step </button>
+                <button onClick={handleSubmit}> Next Step </button>
             </div>
             
         </div>

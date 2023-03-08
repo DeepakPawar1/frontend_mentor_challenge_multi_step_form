@@ -61,3 +61,5 @@ color: #03295a;
     align-items: end;
 }
 
+@media screen and (max-width: 720px) {
+}

@@ -5,6 +5,7 @@ import Firstform from './firstForm.js';
 import SecondForm from './secondForm.js';
 import ThirdForm from './thirdForm';
 import FourthForm from './fourthForm.js'
+import Thankyoubanner from './thankyouBanner';
 import { useState } from 'react';
 function Mainbody(){
 
@@ -39,6 +40,8 @@ function Mainbody(){
                             return <ThirdForm setActive={handlesetActive}></ThirdForm>
                         case 3:
                             return <FourthForm setActive={handlesetActive}></FourthForm>
+                        case 4:
+                            return <Thankyoubanner setActive={handlesetActive}></Thankyoubanner>
                         default:
                             console.log("in case default ",active)
                             return "";

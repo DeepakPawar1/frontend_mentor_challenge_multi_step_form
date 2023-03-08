@@ -1,9 +1,20 @@
 import './firstForm.css';
 
+import {useContext, useState} from 'react';
+import dataContext from '../context/data';
 function Firstform({setActive}){
 
+    const {cdata,add_data} = useContext(dataContext);
+    const [name,setName] = useState(cdata.personal_info.name);
+    const [email,setEmail] = useState(cdata.personal_info.email);
+    const [mob,setMob] = useState(cdata.personal_info.mob);
+    const handleName=(event)=>{setName(event.target.value)};
+    const handleEmail=(event)=>{setEmail(event.target.value)};
+    const handleMob=(event)=>{setMob(event.target.value)};
+    
     const handleSubmit=(event)=>{
         event.preventDefault();
+        add_data({personal_info: {name,email,mob}});
         setActive(1);
     }
 
@@ -16,16 +27,17 @@ function Firstform({setActive}){
             <div className="info">
                 <form className="form">
                     <div>
+                        
                    <label>Name</label> 
-                    <input type="text"/>
+                    <input  value={name} onChange={handleName}  type="text"/>
                     </div>
                     <div>
                     <label>Email Address</label> 
-                    <input type="email"/>
+                    <input value={email} onChange={handleEmail} type="email"/>
                     </div>
                     <div>
                     <label>Phone Number</label> 
-                    <input type="tel"/>
+                    <input value={mob} onChange={handleMob} type="tel"/>
                     </div>
                     <div className="footer-buttons">
                         <button id="submit" onClick={handleSubmit}>Next Step</button>

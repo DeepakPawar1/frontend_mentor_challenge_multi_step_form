@@ -32,3 +32,39 @@
     font-size: 12px;
     color:#03295a;
 }
+
+
+@media screen and (max-width:720px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap:.5rem;
+    }
+    .carditem{
+        position:relative;
+        display:flex;
+        height: 12vh;
+    width: 100%;
+
+    }
+    .card-inner{
+        display: flex;
+        flex-direction: row;
+        height: 10vh;
+    }
+    #cardtitle{
+        position:absolute;
+        top:-15px;
+        left:4rem;
+    }
+    #cardamount{
+        position:absolute;
+        top:30px;
+        left:4rem;
+    }
+    #yearlyplan{
+        position:absolute;
+        top:50px;
+        left:4rem;
+    }
+}

@@ -62,3 +62,11 @@ justify-content: space-between;
 .buttons .activeplan {
     color:  #03295a;
 }
+
+
+@media screen and (max-width:720px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+}
