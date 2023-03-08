@@ -9,10 +9,30 @@
 
 .listitem{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    /* gap:10%; */
+    /* padding-left: 5%;
+        padding-right: 5%; */
     border: 1px solid gray;
     border-radius: 10px;
     margin-top: 1rem;
     height:4rem;
     align-items:center;
+    
+}
+
+
+@media screen and (max-width: 720px){
+    #listitle{
+        color:#03295a;
+        font-size: 14px;
+    }
+    #listdescription,#listamount{
+        font-size: 11px;
+        color: gray;
+    }
+    .listitem{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }

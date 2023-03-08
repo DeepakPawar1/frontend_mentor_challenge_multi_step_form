@@ -4,14 +4,14 @@ import dataContext from '../context/data';
 import { data } from './thirdForm';
 function FourthForm({setActive}){
     const {cdata,add_data} = useContext(dataContext);
-    console.log(cdata,"fourthform");
+    console.log(cdata,"fourthform",cdata.add_ons);
     let finaltotal = 0;
     finaltotal += cdata.plan.amount;
     const renderData = data.map((da,index)=>{
         // cdata.add_ons.map(()=>{
 
         // })
-        if (cdata.add_ons.includes(index) ){
+        if (cdata.add_ons[index]===true ){
             finaltotal +=  cdata.plan.type ? data[index]['amount_yearly']: data[index]['amount'] 
             return (
                 <div className="itotals">

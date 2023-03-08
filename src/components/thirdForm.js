@@ -15,19 +15,19 @@ function ThirdForm({setActive}){
     const {cdata,add_data} = useContext(dataContext);
     const [addOns,setaddOns] = useState([]);
 
-    const selectedaddons = (index)=>{
-        let newarray = addOns
-        if (newarray.includes(index)){
-            newarray.splice( newarray.indexOf(index), 1)
+    // const selectedaddons = (index)=>{
+    //     let newarray = addOns
+    //     if (newarray.includes(index)){
+    //         newarray.splice( newarray.indexOf(index), 1)
             
-        }else{
-            newarray.push(index)
-        }
-        setaddOns(newarray)
-    }
+    //     }else{
+    //         newarray.push(index)
+    //     }
+    //     setaddOns(newarray)
+    // }
     const handleSubmit = ()=>{
-        const adon = {add_ons:addOns}
-        add_data(adon)
+        // const adon = {add_ons:addOns}
+        // add_data(adon)
         setActive(1)
     }
     const isYearly = cdata.plan.type
@@ -41,7 +41,7 @@ function ThirdForm({setActive}){
 
             <div className="addons">
 
-            <AddonLists addonlistData={data} isYearly={isYearly} setaddOns={setaddOns} selectedaddons={selectedaddons}/>
+            <AddonLists addonlistData={data} isYearly={isYearly} current={cdata.add_ons} />
 
 
 

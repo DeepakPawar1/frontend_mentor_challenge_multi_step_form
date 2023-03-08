@@ -10,6 +10,7 @@ const [cdata,setCdata]=useState({personal_info:{name:"",email:"",mob:""},plan:{t
 const valueToShare = {
     cdata,
     add_data: (obj)=>{
+        console.log(obj,"in context")
         setCdata({...cdata,...obj})
     }
 }

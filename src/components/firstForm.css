@@ -62,4 +62,11 @@ color: #03295a;
 }
 
 @media screen and (max-width: 720px) {
+    .footer-buttons{ 
+        position:relative;
+        /* top:0%; */
+        /* right:0%; */
+        /* top:16%; */
+
+    }
 }

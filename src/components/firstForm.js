@@ -25,22 +25,22 @@ function Firstform({setActive}){
                 <p id="headerinfo">Please provide your name,email address, and phone number.</p>
             </div>
             <div className="info">
-                <form className="form">
+                <form className="form" onSubmit={handleSubmit}>
                     <div>
                         
                    <label>Name</label> 
-                    <input  value={name} onChange={handleName}  type="text"/>
+                    <input  value={name} onChange={handleName}  type="text" required/>
                     </div>
                     <div>
                     <label>Email Address</label> 
-                    <input value={email} onChange={handleEmail} type="email"/>
+                    <input value={email} onChange={handleEmail} type="email" required/>
                     </div>
                     <div>
                     <label>Phone Number</label> 
-                    <input value={mob} onChange={handleMob} type="tel"/>
+                    <input value={mob} onChange={handleMob} type="tel" required/>
                     </div>
                     <div className="footer-buttons">
-                        <button id="submit" onClick={handleSubmit}>Next Step</button>
+                        <button id="submit"  type="submit">Next Step</button>
                     </div>
                 </form>
             </div>
