@@ -5,9 +5,10 @@ import App from './App';
 // import dataContext from './context/data';
 // import { cdata } from './context/cdata';
 import { Provider } from './context/data';
-
+import { inject } from '@vercel/analytics';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+inject();
 root.render(
     <Provider>
     <App />
